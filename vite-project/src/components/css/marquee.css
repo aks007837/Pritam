@@ -1,0 +1,21 @@
+.marquee-container
+{
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+.marquee-content
+{
+    /* border: 2px solid red; */
+    background-color: aqua;
+    animation: marquee 20s linear infinite;
+    display: inline-block;
+}
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

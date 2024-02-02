@@ -1,0 +1,261 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+.main{
+    /* border: 2px solid red; */
+    min-height: 90ch;
+    width: 100%;
+    padding: 0;
+    position: relative; 
+}
+
+.topbody
+{
+    /* width: 100%; */
+    /* border: 2px solid pink; */
+    /* position: relative; */
+    display: flex;
+    height: 75vh;
+    margin: 0px 5%;
+    /* padding-bottom: 3%; */
+    margin-bottom: 5%;
+    border-bottom: 1px dotted gray;
+    position: relative;
+    /* background: linear-gradient(to bottom right, antiquewhite, #d3d3d3); */
+    /* box-shadow: 0px 0px 5px 5px gray inset; */
+}
+#video-background
+{
+    position: absolute;
+    bottom: 0.5%;
+    left: 0.5%;
+    border-radius: 20px;
+    object-fit: cover;
+    /* aspect-ratio: 16/9; */
+    width: 40%;
+    height: 55%;
+}
+.rightbody
+{
+    /* border: 2px solid blue; */
+    /* position: fixed; */
+    width: 100%;
+    font-size: 95px;
+    text-align: right;
+    font-weight: bold;
+    line-height: normal;
+    display: flex;
+    align-items: flex-start;
+    word-spacing: 100vw;
+    padding: 4px 5px;
+}
+.leftbody
+{
+    /* border: 2px solid yellow; */
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+    padding: 15px 5%;
+    font-size: 22px;
+    font-weight: bold;
+    
+}
+.bottombody
+{
+    /* border: 2px solid greenyellow; */
+    /* margin: 0px 5%; */
+    overflow: hidden;
+    z-index: -1;
+    /* background-color: aqua; */
+    color: white; 
+    padding: 1%;  
+}
+
+
+.popup-outer {
+    height: 95%;
+    width: 95%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    animation: fadeInOut 0.3s ease-in-out forwards;
+  }
+  
+  .popup {
+    height: 90%;
+    width: 90%;
+    background-color: rgb(93, 100, 98);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    overflow-y: scroll;
+    animation: scaleIn 0.3s ease-in-out forwards;
+  }
+  
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes scaleIn {
+    0% {
+      transform: translate(-50%, -50%) scale(0);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  
+  #cross {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 30px;
+  }
+  
+  /* Add this class to .popup-outer to trigger the exit animation */
+  .popup-outer.hide {
+    animation: fadeOut 0.3s ease-in-out forwards;
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  /* Add this class to .popup to trigger the exit animation */
+  .popup.hide {
+    animation: scaleOut 0.3s ease-in-out forwards;
+  }
+  
+  @keyframes scaleOut {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(0);
+    }
+  }
+
+.buzz
+{
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.5);
+
+}
+.buttons
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    /* border: 2px solid red; */
+}
+
+.left_buttons
+{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+}
+.right_buttons
+{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+}
+.btn
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* border: 2px solid red; */
+}
+.btn button
+{
+    padding: 10px;
+    margin: 3%;
+    border-radius: 5px;
+    background-color: rgba(117, 115, 115, 0.569);
+    /* background: linear-gradient(to bottom, #f8f9fa, #7de2ef); */
+    color: white;
+    display: flex;
+    height: 50px;
+    width: 200px;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+    border: 1px solid cyan;
+    transition: background-color 0.5s ease;
+}
+.btn button:hover
+{
+    cursor: pointer;
+    background-color: rgb(93, 94, 94);
+}
+.head
+{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.body
+{
+    text-align: center;
+    margin: 10px;
+}
+
+@media (max-width: 900px) {
+    .buttons
+    {
+        width: 100%;
+    }
+    .topbody
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .rightbody{
+        font-size: 58px;
+        text-align: center;
+    }
+    #video-background
+    {
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 20px;
+        object-fit: cover;
+        /* aspect-ratio: 16/9; */
+        width: 350px;
+        height: 40%;
+    }
+  }
+@media (max-width: 500px) {
+    .buttons
+    {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+  }

@@ -1,0 +1,77 @@
+.Test
+{
+    /* border: 2px solid green; */
+    background: linear-gradient(to top, #f8f9fa, #7de2ef);
+    width: 100%;
+    /* border: 2px solid green; */
+}
+.customer
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 3%;
+    padding: 5px 10px;
+    border-bottom: 1px dashed orangered;
+    /* transition: background-color 1s ease-out; */
+    background-size: 100% 200%;
+    background-image: linear-gradient(to top, rgba(100, 216, 239, 0.588) 50%,transparent 50%);
+        /* background: linear-gradient(to top, #f8f9fa, #7de2ef); */
+    /* background-image: linear-gradient(to top, rgba(239, 170, 65, 0.714) 50%,transparent 50%); */
+    -webkit-transition: background-position 0.5s;
+    -moz-transition: background-position 0.5s;
+    transition: background-position 0.5s;
+}
+#h1
+{
+    font-size: 42px;
+    font-weight: bold;
+}
+#video
+{
+    display: none;
+    background-color: blueviolet;
+    height: 60vh;
+    width: 40vw;
+    
+
+}
+.review
+{
+
+}
+/* Initial styles */
+.customer:hover
+{
+    /* background-color: orangered; */
+    background-position: 0 -100%;
+}
+#videos-background
+{
+    transition: display 1.5s ease;
+    display: none;
+    border-radius: 20px;
+    object-fit: cover;
+    /* aspect-ratio: 16/9; */
+    width: 40%;
+    height: 50%;
+    position: fixed;
+    top: 20%;
+    right: 20%;
+}
+@media (max-width: 600px) {
+    .id div{
+        font-size: 15px;
+    }
+    #h1
+    {
+        font-size: 25px;
+    }
+}
+@media (max-width: 450px) {
+    
+    .customer
+    {
+        flex-direction: column;
+        padding: 15px 0px;
+    }
+}
